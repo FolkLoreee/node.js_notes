@@ -51,3 +51,46 @@ module_name.function()
 })
 ```
 ``__filename`` and ``__dirname`` encodes the absolute path to the file and directory that contains the file, respectively.
+
+### Various Modules
+
+#### Path Module
+To access file details
+
+```js
+const path = require('path')
+var pathObj = path.parse(__filename);
+```
+``pathObj`` is an object that contains the directory and name of the file.
+
+#### OS Module
+To access OS details
+
+```js
+const os = require('os')
+console.log(`Total memory: ${os.totalmem()}. Free memory: ${os.freemem()}`)
+```
+#### File System Module
+To access folder stuff (has both async and sync methods)
+
+```js
+const fs = require('fs');
+
+fs.readdir('./', function(err,files){
+  if (err) console.log("Error: ", err);
+  else console.log(files);
+
+}); //returns the list of files inside the folder
+```
+
+#### Events Module
+The core of node.js.\
+Example of an event: HTTP Request.
+
+```js
+const EventEmitter = require('events')
+const emitter = new EventEmitter();
+```
+``EventEmitter`` has 2 important methods: `emit()` and `on()`.
+`EventEmitter.on('eventName',args)` turns on the EventListener for future `eventName` raises, and thus must be called before any `eventName` is raised.
+`EventEmitter.emit('eventName',args)` raises an event with arguments which will also be passed to EventEmitter.on()
