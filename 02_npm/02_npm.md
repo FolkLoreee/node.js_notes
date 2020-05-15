@@ -6,7 +6,7 @@ Checking node / npm version:
 Installing different version of npm:
 `sudo npm i -g npm@5.5.1`
 
-## package.JSON
+## package.json
 
 Before creating any node.js application, make sure to configure the package.JSON by `npm init`.
 
