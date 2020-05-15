@@ -1,0 +1,14 @@
+{
+  "name": "02_npm",
+  "version": "1.0.0",
+  "description": "tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "folkloreee",
+  "license": "ISC",
+  "dependencies": {
+    "underscore": "^1.10.2"
+  }
+}
