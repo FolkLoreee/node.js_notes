@@ -30,7 +30,7 @@ async function getCourses() {
         .find({ author: 'Me', isPublished: true }) ///find is also asyncrhonous
         .limit(10) //limit results to 10 data
         .sort({ name: 1 }) //meaning sort in ascending order, -1 is descending
-        .select({ name: 1, tags: 1 }); //meaning we only want to display the name and tags (in addition to ID)
+        .select({ name: 1, id: 1 }); //meaning we only want to display the name and tags (in addition to ID)
     console.log(courses);
 }
 getCourses();
