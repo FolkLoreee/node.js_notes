@@ -125,8 +125,9 @@ try {
 ### String Properties
 
 ```js
-lowercase: true
+lowercase: true,
 uppercase: true,
+unique: true,
 trim: true //its like strip in python
 ```
 
